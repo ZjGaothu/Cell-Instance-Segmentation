@@ -72,3 +72,42 @@ $ cd Cell-Instance-Segmentation
         - pred.py: 重构的测试集预测代码，运行需修改路径。
         - dataset.py: 重构的dataloader
 - report.pdf：报告文档
+## Tutorial  
+### 预处理
+run the code:
+```   
+$ python code/generate_data1.py
+$ python code/generate_data2.py
+```
+
+### 网络训练
+训练网络参数，选择保存适当的模型进行后处理。
+```
+$ nohup python code/traindata1.py xxx.log1 > 2>&1 &
+$ nohup python code/traindata2.py xxx.log2 > 2>&1 &
+optional arguments:
+  -e, --epochs            show this help message and exit
+  -b, --batchsize 
+  -l, --learning-rate
+  --img_dir,            data directory
+  --mask_dir,           data directory
+  --modelname,          model name
+  --ext
+  --savefre,            save frequency
+  --scale,              resize shape
+  --crop,               crop shape
+```
+
+### 测试集语义分割
+将测试集输入至语义分割网络中，进行语义分割，得到原尺寸分割结果
+```
+$ python code/preddata1.py
+$ python code/preddata2.py
+```
+
+### 后处理
+对两数据集分别运行后处理代码
+```
+$ python code/handle1.py
+$ python code/handle2.py
+```
