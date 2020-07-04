@@ -1,6 +1,4 @@
 # Cell-Instance-Segmentation 模式识别与机器学习大作业(细胞分割)
-The project of Pattern Recognition and Machine Learning
-
 > 姓名：高子靖
 >
 > 学号：2017010917
@@ -8,6 +6,11 @@ The project of Pattern Recognition and Machine Learning
 > 班级：自72
 >
 > Email: gaozj17@mails.tsinghua.edu.cn
+
+本项目为2020年春季学期模式识别课程大作业，旨在完成分别在数据集一以及数据集二(少量标注)的细胞实例分割，并且以Jaccard相似度作为最终的评价指标。本人基于U-2-Net语义分割以及数字图形形态学预处理和后处理，完成了两数据集的实例分割，并提出了一种可处理细胞粘连的分割方法，具体代码基于U-2-Net进行修改与补充(https://doi.org/10.1016/j.patcog.2020.107404)
+<div align=center>
+<img src = "inst/1-11.png" width = 40% height = 40%>
+</div>  
 -------
 ## 运行环境
 - Windows 10 x64
